@@ -44,7 +44,9 @@ def load_model():
 model = load_model()
 
 # ----------- WEB UI -----------
-st.title("Chromium Class Prediction")
+st.title("Mahindra University"/ "Department of Chemistry")
+st.image("logo.png", width=150)
+st.title("Chromium Contain Prediction")
 st.write("Upload an image to classify its Chromium class.")
 
 uploaded_file = st.file_uploader("Choose an image", type=["jpg", "jpeg", "png"])
@@ -69,4 +71,4 @@ if uploaded_file is not None:
         predicted_class = CLASS_NAMES[predicted.item()]
 
     # ----------- DISPLAY RESULT -----------
-    st.success(f"✅ Predicted Chromium Class: {predicted_class}")
+    st.success(f"✅ Predicted Chromium Contain: 10^-{predicted_class} M")
