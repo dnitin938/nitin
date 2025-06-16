@@ -44,7 +44,8 @@ def load_model():
 model = load_model()
 
 # ----------- WEB UI -----------
-st.title("Mahindra University"/ "Department of Chemistry")
+st.title("Mahindra University") 
+st.title("Department of Chemistry") 
 st.image("mulogo.jpg", width=150)
 st.title("Chromium Contain Prediction")
 st.write("Upload an image to classify its Chromium class.")
