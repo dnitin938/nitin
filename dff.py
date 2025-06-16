@@ -47,14 +47,14 @@ model = load_model()
 st.title("Mahindra University") 
 st.title("Department of Chemistry") 
 st.image("mulogo.jpg", width=150)
-st.title("Chromium Contain Prediction")
+st.title("Hg Contain Prediction")
 st.write("Upload an image to classify its Chromium class.")
 
 uploaded_file = st.file_uploader("Choose an image", type=["jpg", "jpeg", "png"])
 
 if uploaded_file is not None:
     image = Image.open(uploaded_file).convert("RGB")
-    st.image(image, caption="Uploaded Image", use_column_width=True,use_container_width=False)
+    st.image(image, caption="Uploaded Image", use_container_width=False)
 
     # ----------- PREPROCESS -----------
     transform = transforms.Compose([
@@ -72,4 +72,4 @@ if uploaded_file is not None:
         predicted_class = CLASS_NAMES[predicted.item()]
 
     # ----------- DISPLAY RESULT -----------
-    st.success(f"✅ Predicted Chromium Contain: 10^-{predicted_class} M")
+    st.success(f"✅ Predicted Hg Contain: 10^-{predicted_class} M")
